@@ -1,13 +1,13 @@
 ---
 wts:
-    title: '16 - 리소스 태그 지정 구현(5분)'
-    module: '모듈 05: ID, 거버넌스, 개인 정보 및 규정 준수 기능에 대해 설명하기'
+  title: 16 - 리소스 태그 지정 구현(5분)
+  module: 'Module 05: Describe identity, governance, privacy, and compliance features'
 ---
-# 16 - 리소스 태그 지정 구현(5분)
+# <a name="16---implement-resource-tagging-5-min"></a>16 - 리소스 태그 지정 구현(5분)
 
 이 연습에서는 태그 지정을 요구하는 정책 할당을 만들고, 스토리지 계정을 만들고, 태그를 테스트하고, 지정된 태그가 있는 리소스를 보고, 태그 지정 정책을 제거합니다.
 
-# 작업 1: 정책 할당 만들기 
+# <a name="task-1-create-a-policy-assignment"></a>작업 1: 정책 할당 만들기 
 
 이 작업에서는 **리소스에 태그 필요** 정책을 구성하고 구독에 할당합니다. 
 
@@ -19,68 +19,68 @@ wts:
 
 4. 정책의 **범위**는 구독 전체입니다. 
 
-5. **기초**에서 **정책 정의** 줄임표 단추(텍스트 상자 오른쪽)를 선택합니다. **검색** 상자에 **tag**라는 값을 입력합니다. **tag**라는 단어가 포함된 관련 정책 목록이 나타납니다. **Require a tag on resources** 정의를 찾을 때까지 아래로 스크롤한 후에 이를 클릭하고 **선택**을 클릭합니다.
+5. Under <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> Select the <bpt id="p2">**</bpt>Policy definition<ept id="p2">**</ept> ellipsis button (right side of textbox). In the <bpt id="p1">**</bpt>Search<ept id="p1">**</ept> box, enter the value <bpt id="p2">**</bpt>tag<ept id="p2">**</ept>. A list of related Policies with the word <bpt id="p1">**</bpt>tag<ept id="p1">**</ept> will appear. Scroll down till you find the <bpt id="p1">**</bpt>Require a tag and its value on resources<ept id="p1">**</ept> definition, click on it and click <bpt id="p2">**</bpt>Select<ept id="p2">**</ept>.
 
-   ![리소스에 태그 필요가 선택된 사용 가능한 정의의 스크린샷.](../images/1701.png)
+   ![이미지](https://user-images.githubusercontent.com/89808319/155607579-d564a43e-a9cd-443d-8482-f47879eff2e9.png)
    
-6.  **매개 변수** 탭에서 키/값 쌍 이름에 대해 **Company : Contoso**를 입력합니다. **검토 + 만들기**를 클릭하고 **만들기**를 클릭합니다.
+6.  On the <bpt id="p1">**</bpt>Parameters<ept id="p1">**</ept> tab, type in **Company : Contoso ** for the tag key/value pair name. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>, and then <bpt id="p2">**</bpt>Create<ept id="p2">**</ept>.
 
-    ![태그 이름이 입력된 정책 할당 창의 스크린샷.](../images/1702.png)
+  
 
-7. 이제 **리소스에 태그 필요** 정책이 적용됩니다. 리소스가 생성될 때 Company : Contoso 키가 있는 태그를 포함해야 합니다.
-   **참고 - 정책이 적용될 때까지 최대 30분까지 기다려야 합니다.** 
+7. The <bpt id="p1">**</bpt>Require a tag amd its value on resources<ept id="p1">**</ept> policy assignment is now in place. When a resource is created, it must include a tag with the Company : Contoso key.
+   <bpt id="p1">**</bpt>Note - you need to wait up to 30 minutes for the Policy to be applied.<ept id="p1">**</ept> 
 
-   ![허용된 위치 할당이 강조 표시된 정책 - 할당 창의 스크린샷.](../images/1703.png)
+  ![이미지](https://user-images.githubusercontent.com/89808319/155607357-556646b6-9ca7-4817-a02e-643869b2c4dd.png)
 
-# 작업 2: 스토리지 계정을 만들어 필요한 태그 지정 테스트
+# <a name="task-2-create-a-storage-account-to-test-the-required-tagging"></a>작업 2: 스토리지 계정을 만들어 필요한 태그 지정 테스트
 
 이 작업에서는 스토리지 계정을 만들어 필요한 태그 지정을 테스트합니다. 
 
-1. Azure Portal의 **모든 서비스** 블레이드에서 **스토리지 계정**을 검색하여 선택한 다음 **+추가 +새로 만들기 +만들기**를 선택합니다.
+1. Azure Portal의 **모든 서비스** 블레이드에서 **스토리지 계정**을 검색하여 선택한 다음 **+추가 +새로 만들기 +만들기**를 클릭합니다.
 
-2. **스토리지 계정 만들기** 블레이드의 **기본** 탭에서 다음 정보를 채웁니다(스토리지 계정 이름의 **xxxx**를 이름이 전역적으로 고유하도록 문자와 숫자로 대체). 다른 항목은 기본값을 사용합니다.
+2. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
 
     | 설정 | 값 | 
     | --- | --- |
     | 구독 | **제공된 기본값 사용** |
-    | 리소스 그룹 | **새 리소스 그룹 만들기** |
+    | Resource group | **새 리소스 그룹 만들기** |
     | 스토리지 계정 이름 | **storageaccountxxxx** |
     | 위치 | **(미국) 미국 동부** |
 
 3. **검토 + 만들기**를 클릭합니다. 
 
-    **참고:** 태그를 제공하지 않는 경우의 결과를 확인하기 위한 테스트를 수행하고 있습니다. 정책이 적용되려면 최대 30분까지 걸릴 수 있습니다.
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We are testing to see what happens when the tag is not supplied. Please note, it can take up to 30 minutes for Policies to take effect.
 
-4. 유효성 검사 실패 메시지를 받게 됩니다. **자세한 내용을 보려면 여기를 클릭하세요** 메시지를 클릭합니다. **오류** 블레이드의 **요약** 탭에서 리소스가 정책에 의해 금지되었다는 내용의 오류 메시지를 메모합니다.
+4. You will receive a Validation failed message. Click the <bpt id="p1">**</bpt>Click here to view details<ept id="p1">**</ept> message. On the <bpt id="p1">**</bpt>Errors<ept id="p1">**</ept> blade, on the <bpt id="p2">**</bpt>Summary<ept id="p2">**</ept> tab note the error message stating that resource was disallowed by Policy.
 
     **참고:** Raw 오류 탭에는 필요한 특정 태그 이름이 표시됩니다. 
 
     ![정책으로 인해 허용되지 않음 오류의 스크린샷.](../images/1704.png)
 
 
-5. **오류** 창을 닫고 **이전**(화면 아래쪽)을 클릭합니다. 태그 지정 정보를 제공합니다. 
+5. Close the <bpt id="p1">**</bpt>Error<ept id="p1">**</ept> pane and click <bpt id="p2">**</bpt>Previous<ept id="p2">**</ept> (bottom of the screen). Provide the tagging information. 
 
     | 설정 | 값 | 
     | --- | --- |
     | 태그 이름 | **Company:Contoso**(드롭다운 목록에 없을 수 있음) |
 
-6. **검토 + 만들기**를 클릭하고 유효성 검사가 성공적이었는지 확인합니다. **만들기**를 클릭하여 스토리지 계정을 배포합니다. 
+6. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and verify that the validation was successful. Click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> to deploy the storage account. 
 
-# 작업 3: 특정 태그가 있는 모든 리소스 보기
+# <a name="task-3-view-all-resources-with-a-specific-tag"></a>작업 3: 특정 태그가 있는 모든 리소스 보기
 
 1. Azure Portal의 **모든 서비스** 블레이드에서 **태그**를 검색하고 선택합니다.
 
-2. 모든 태그와 해당 값을 메모합니다. **Company : Contoso** 키/값 쌍을 클릭합니다. 배포 중에 태그를 포함했다면 새로 생성된 스토리지 계정을 보여주는 블레이드가 표시됩니다. 
+2. Note all tags and their values. Click the <bpt id="p1">**</bpt>Company : Contoso<ept id="p1">**</ept> key/value pair. This will display a blade showing the newly created storage account, as long as you included the tag during its deployment. 
 
    ![Company와 Contoso가 선택된 태그의 스크린샷.](../images/1705.png)
 
 3. Portal에서 **모든 리소스** 블레이드를 표시합니다.
 
-4. **필터 추가**를 클릭하고 **Company** 태그 키를 필터 범주로 추가합니다. 필터가 적용되면 스토리지 계정만 나열됩니다.
+4. Click <bpt id="p1">**</bpt>Add filter<ept id="p1">**</ept> and add the <bpt id="p2">**</bpt>Company<ept id="p2">**</ept> tag key as the filter category. With the filter applied, only your storage account will be listed.
 
     ![Company가 선택된 모든 리소스 필터의 스크린샷.](../images/1706.png)
 
-# 작업 4: 정책 할당 삭제
+# <a name="task-4-delete-the-policy-assignment"></a>작업 4: 정책 할당 삭제
 
 이 작업에서는 미래의 작업에 영향을 미치지 않도록 **리소스에 태그 필요** 정책을 제거합니다. 
 
@@ -94,7 +94,7 @@ wts:
 
 5. 시간이 있으면 태그가 없는 다른 리소스를 만들어서 정책이 더 이상 적용되지 않는지를 확인합니다.
 
-축하합니다! 이 연습에서는 태그 지정을 요구하는 정책 할당을 만들고, 리소스(스토리지 계정)를 만들고, 태그를 지정할 정책을 테스트하고, 지정된 태그가 있는 리소스를 보고, 태그 지정 정책을 제거합니다.
+**기초**에서 **정책 정의** 줄임표 단추(텍스트 상자 오른쪽)를 선택합니다.
 
 
-**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.
+**검색** 상자에 **tag**라는 값을 입력합니다.

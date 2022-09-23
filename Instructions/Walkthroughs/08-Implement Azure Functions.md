@@ -1,29 +1,29 @@
 ---
 wts:
-    title: '08 - Azure Functions 구현(5분)'
-    module: '모듈 03: 핵심 솔루션 및 관리 도구 설명'
+  title: 08 - Azure Functions 구현(5분)
+  module: 'Module 03: Describe core solutions and management tools'
 ---
-# 08 - Azure Functions 구현(5분)
+# <a name="08---implement-azure-functions-5-min"></a>08 - Azure Functions 구현(5분)
 
 이 연습에서는 HTTP 요청이 수신될 때 Hello 메시지를 표시하는 함수 앱을 만듭니다. 
 
-# 작업 1: 함수 앱 만들기 
+# <a name="task-1-create-a-function-app"></a>작업 1: 함수 앱 만들기 
 
 이 작업에서는 함수 앱을 만듭니다.
 
 1. [Azure Portal](https://portal.azure.com)에 로그인합니다.
 
-2. Portal 상단에 있는 **검색** 창에서 **함수 앱**을 검색하여 선택한 다음 **함수 앱** 블레이드에서 **+ 추가**, **+ 만들기**, **+ 새로 만들기**를 클릭합니다.
+2. 포털 위쪽의 **검색** 상자에서 **함수 앱**을 검색하여 선택한 다음 **함수 앱** 블레이드에서 **+ 추가, + 만들기, + 새로 만들기**를 클릭합니다.
 
 3. **함수 앱** 블레이드의 **기본** 탭에서 다음 설정을 지정합니다(함수 이름의 **xxxx**를 이름이 전역적으로 고유하도록 문자와 숫자로 대체하고 다른 모든 설정은 기본값으로 유지). 
 
     | 설정 | 값 |
     | -- | --|
-    | 구독 | **제공된 기본값 사용** |
-    | 리소스 그룹 | **새 리소스 그룹 만들기** |
+    | 구독 | **제공된 기본값 유지** |
+    | Resource group | **새 리소스 그룹 만들기** |
     | 함수 앱 이름 | **function-xxxx** |
     | 게시 | **코드** |
-    | 런타임 스택 | **NET** |
+    | 런타임 스택 | **.NET** |
     | 버전 | **3.1** |
     | 지역 | **미국 동부** |
 
@@ -33,50 +33,50 @@ wts:
 
 5. 리소스가 생성되었다는 알림이 표시될 때까지 기다립니다.
 
-6. 배포가 완료되면 배포 블레이드에서 리소스로 이동을 클릭합니다. 또는 **함수 앱** 블레이드로 다시 돌아가서 **새로 고침**을 클릭하고 새로 만든 함수 앱의 상태가 **실행 중**인지 확인합니다. 
+6. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, navigate back to the <bpt id="p1">**</bpt>Function App<ept id="p1">**</ept> blade, click <bpt id="p2">**</bpt>Refresh<ept id="p2">**</ept> and verify that the newly created function app has the <bpt id="p3">**</bpt>Running<ept id="p3">**</ept> status. 
 
     ![새 함수 앱이 표시된 함수 앱 페이지의 스크린샷.](../images/0701.png)
 
-# 작업 2: HTTP 트리거 함수 만들기 및 테스트
+# <a name="task-2-create-a-http-triggered-function-and-test"></a>작업 2: HTTP 트리거 함수 만들기 및 테스트
 
 이 작업에서는 HTTP 요청이 수신될 때 웹후크 및 API 함수를 사용하여 메시지를 표시합니다. 
 
 1. **함수 앱** 블레이드에서 새로 생성된 함수 앱을 클릭합니다. 
 
-2. 함수 앱 블레이드의 **함수** 섹션에서 **함수**를 클릭한 다음 **+ 추가**, **+ 만들기**, **+ 새로 만들기**를 클릭합니다.
+2. 함수 앱 블레이드의 **함수** 섹션에서 **함수**를 클릭한 다음 **+ 추가, + 만들기, + 새로 만들기**를 클릭합니다.
 
-    ![Azure Portal에서 .NET 시작하기 창에 대한 Azure Functions의 개발 환경 선택 단계 스크린샷. 새 포털 내 함수를 만들기 위한 표시 요소가 강조 표시됩니다. 함수 애플리케이션 확장, 새 기능 추가, 포털 내 및 계속 단추 요소가 강조 표시되어 있습니다.](../images/0702.png)
+    ![Screenshot of the choose a development environment step in the azure functions for dot net getting started pane inside Azure portal. The display elements for creating a new in-portal function are highlighted. The highlighted elements are expand the function app, add new function, in-portal, and the continue button.](../images/0702.png)
 
-3. 오른쪽에 **함수 추가** 팝업 창이 나타납니다. **템플릿 선택** 섹션에서 **HTTP 트리거**를 클릭합니다. **추가**를 클릭합니다. 
+3. An <bpt id="p1">**</bpt>Add function<ept id="p1">**</ept> pop-up window will appear on the right. In the <bpt id="p1">**</bpt>Select a template<ept id="p1">**</ept> section click <bpt id="p2">**</bpt>HTTP trigger<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> 
 
-    ![Azure Portal에서 .NET 시작하기 창에 대한 Azure Functions의 함수 만들기 단계 스크린샷. Azure Functions에 새 웹후크를 추가하는 데 사용되는 표시 요소를 보여주기 위해 HTTP 트리거 카드가 강조 표시되어 있습니다.](../images/0702a.png)
+    ![Screenshot of the create a function step in the azure functions for dot net getting started pane inside Azure portal. The HTTP trigger card is highlighted to illustrate the display elements used to add a new webhook to an Azure function.](../images/0702a.png)
 
 4. **HttpTrigger1** 블레이드의 **개발자** 섹션에서 **코드 + 테스트**를 클릭합니다. 
 
-5. **코드 + 테스트** 블레이드에서 자동 생성된 코드를 검토하고 해당 코드가 HTTP 요청 및 로그 정보를 실행하도록 설계되었는지 확인합니다. 또한 이 함수는 이름과 함께 Hello 메시지를 반환합니다. 
+5. On the <bpt id="p1">**</bpt>Code + Test<ept id="p1">**</ept> blade, review the auto-generated code and note that the code is designed to run an HTTP request and log information. Also, notice the function returns a Hello message with a name. 
 
-    ![함수 코드의 스크린샷. Hello 메시지가 강조 표시되어 있습니다.](../images/0704.png)
+    ![Screenshot of the function code. The Hello message is hightlighted.](../images/0704.png)
 
 6. 함수 편집기의 최상위 섹션에서 **함수 URL 가져오기**를 클릭합니다. 
 
 7. **키** 드롭다운 목록에 있는 값이 **기본값**으로 설정되었는지 확인하고 **복사**를 클릭하여 함수 URL을 복사합니다. 
 
-    ![Azure Portal의 함수 편집기에 있는 함수 URL 가져오기 창의 스크린샷. 함수 편집기에서 함수 URL을 가져오고 복사하는 방법을 보여주기 위해 함수 URL 가져오기 단추, 키 설정 드롭다운 및 URL 복사 단추 표시 요소가 강조 표시되어 있습니다.](../images/0705.png)
+    ![Screenshot of the get function URL pane inside the function editor in Azure portal. The display elements get function URL button, set key dropdown, and copy URL button are highlighted to indicate how to obtain and copy the function URL from the function editor.](../images/0705.png)
 
-8. 새 브라우저 탭을 열고 복사한 함수 URL을 웹 브라우저의 주소 표시줄에 붙여 넣습니다. 페이지가 요청되면 함수가 실행됩니다. 요청 본문에 함수 이름이 필요하다는 내용의 메시지가 반환된 것을 볼 수 있습니다.
+8. Open a new browser tab and paste the copied function URL into your web browser's address bar. When the page is requested the function will run. Notice the returned message stating that the function requires a name in the request body.
 
     ![이름을 입력하라는 메시지의 스크린샷.](../images/0706.png)
 
 9. URL의 끝에 **&name=*yourname***을 추가합니다.
 
-    **참고**: 예를 들어 이름이 Cindy인 경우 최종 URL은 다음과 유사합니다. `https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&name=cindy`
+    **참고**: 예를 들어 이름이 Cindy인 경우, 최종 URL은 다음과 비슷하게 됩니다. `https://azfuncxxx.azurewebsites.net/api/HttpTrigger1?code=X9xx9999xXXXXX9x9xxxXX==&name=cindy`
 
-    ![웹 브라우저의 주소 표시줄에 강조 표시되어 있는 함수 URL과 추가된 예제 사용자 이름의 스크린샷. 기본 브라우저 창의 함수 출력을 보여주기 위해 Hello 메시지와 사용자 이름도 강조 표시되어 있습니다.](../images/0707.png)
+    ![Screenshot of a highlighted function URL and an appended example user name in the address bar of a web browser. The hello message and user name are also highlighted to illustrate the output of the function in the main browser window.](../images/0707.png)
 
-10. Enter 키를 누르면 함수가 실행되고 모든 호출이 추적됩니다. 추적 상황을 보려면 Portal **HttpTrigger1 \| 코드 + 테스트** 블레이드로 돌아가 **모니터**를 클릭합니다. 타임스탬프를 선택하고 **Application Insights에서 쿼리 실행**을 클릭하여 Application Insights를 **구성**할 수 있습니다.
+10. When you hit enter, your function runs and every invocation is traced. To view the traces, return to the Portal <bpt id="p1">**</bpt>HttpTrigger1 <ph id="ph1">\|</ph> Code + Test<ept id="p1">**</ept> blade and click <bpt id="p2">**</bpt>Monitor<ept id="p2">**</ept>. You can <bpt id="p1">**</bpt>configure<ept id="p1">**</ept> Application Insights by selecting the timestamp and click <bpt id="p2">**</bpt>Run query in Application Insights<ept id="p2">**</ept>.
 
     ![Azure Portal의 함수 편집기에서 함수를 실행하여 생성된 추적 정보 로그의 스크린샷.](../images/0709.png) 
 
-축하합니다. HTTP 요청이 수신될 때 Hello 메시지를 표시하는 함수 앱을 만들었습니다. 
+Congratulations! You have created a Function App to display a Hello message when there is an HTTP request.  
 
-**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.
+<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.

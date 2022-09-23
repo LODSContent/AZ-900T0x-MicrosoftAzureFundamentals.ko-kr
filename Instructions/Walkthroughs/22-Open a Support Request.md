@@ -1,26 +1,26 @@
 ---
 wts:
-    title: '22 - 지원 요청 열기(5분)'
-    module: '현재 시험에서 활용되지 않습니다.'
+  title: 22 - 지원 요청 열기(5분)
+  module: Not currently utilized in current exam
 ---
-# 22 - 지원 요청 열기(5분)
+# <a name="22---open-a-support-request-5-min"></a>22 - 지원 요청 열기(5분)
 
 이 연습에서는 사용 가능한 지원 플랜 옵션을 검토한 후 새 지원 요청을 만들고 모니터링하는 연습을 합니다.
 
-# 작업 1: 사용 가능한 지원 플랜 옵션 및 기술 지원 요청 보기
+# <a name="task-1-view-available-support-plan-options-and-a-technical-support-request"></a>작업 1: 사용 가능한 지원 플랜 옵션 및 기술 지원 요청 보기
 
 1. [**Azure Portal**](https://portal.azure.com)에 로그인합니다.
 
-2. **모든 서비스** 블레이드에서 **도움말 + 지원** 을 검색하여 선택한 다음 **지원 플랜** 을 선택합니다.
+2. **모든 서비스** 블레이드에서 **도움말 + 지원**을 검색하여 선택한 다음 **지원 플랜**을 선택합니다.
 
-3. 몇 분 정도 시간을 내어 서로 다른 지원 플랜을 검토합니다. **기본** 플랜에 포함된 항목을 확인합니다. 
+3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
 
-4. **+ 새 지원 요청** 을 클릭합니다. 지정한 값에 따라 티켓이 생성됩니다. 
+4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
 
     | 설정 | 값|
     |----|--------|
     | 문제 유형| **기술** |
-    | 구독 | **보유한 구독 선택** |
+    | 구독 | **사용하는 구독 선택** |
     | 서비스 | **모든 서비스**, **Linux를 실행하는 가상 머신** |
     | 요약 | **디스크 액세스가 큰 파일에서 매우 느림** |
     | 문제 유형 | **VM 성능** |
@@ -29,30 +29,30 @@ wts:
 
 5. **다음: 솔루션 >>** 을 클릭하고 권장 솔루션을 읽습니다.
 
-6. **다음: 세부 정보 >>** 를 클릭합니다.   
+6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
 
-    **참고:** 이 연습은 여기서 멈춥니다. 기술 요청을 제출하는 방법을 알고 있습니까?
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
 
-# 작업 2: 청구 지원 요청 만들기
+# <a name="task-2-create-a-billing-support-request"></a>작업 2: 청구 지원 요청 만들기
 
 1. **새 지원 요청** 섹션의 **기본** 탭으로 돌아갑니다. 
 
     | 설정 | 값|
     |----|--------|
-    | 문제 유형| **청구** |
-    | 구독 | **보유한 구독 선택** |
+    | 문제 유형| **Billing** |
+    | 구독 | **사용하는 구독 선택** |
     | 요약 | **월 비용이 올바르지 않음** |
-    | 문제 유형 | **가격 책정** |
+    | 문제 유형 | **가격** |
     | 문제 하위 유형 | **서비스 가격을 알아볼 수 있게 지원** |    
 
-2. **다음: 솔루션** 을 클릭하고 권장 솔루션을 읽습니다.
+2. **다음: 솔루션**을 클릭하고 권장 솔루션을 읽습니다.
 
-3. **다음: 세부 정보** 를 클릭합니다.  실제 지원 요청을 제출할 때 최대한 많은 정보를 제공하여 문제를 신속하게 해결할 수 있도록 합니다. 
+3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
 
-    **참고:** 이 연습은 여기서 멈춥니다. 지원 요청을 제출하는 방법을 알고 있습니까?
+    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
 
-4. **모든 지원 요청** 을 클릭합니다. 여기에 지원 요청이 표시됩니다. 지원 요청의 세부 정보가 포함된 이메일도 이메일 주소로 전송됩니다.
+4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
 
-축하합니다. 사용 가능한 지원 플랜 옵션을 보고 새 지원 요청을 만들고 모니터링하는 연습을 했습니다.
+몇 분 정도 시간을 내어 서로 다른 지원 플랜을 검토합니다.
 
-**참고**: [**Azure 지원 티켓을 만드는 방법**](https://azure.microsoft.com/ko-kr/support/create-ticket)에 대한 자세한 내용을 보려면 클릭하세요.
+**참고**: [**Azure 지원 티켓을 만드는 방법**](https://azure.microsoft.com/en-us/support/create-ticket)에 대한 자세한 내용을 보려면 클릭하세요.
