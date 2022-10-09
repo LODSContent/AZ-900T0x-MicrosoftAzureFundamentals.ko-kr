@@ -7,7 +7,7 @@ wts:
 
 이 연습에서는 Azure 서비스의 가용성 SLA를 결정한 다음 애플리케이션 복합 SLA 기반 예상 가용성을 계산합니다.
 
-Our example application consists of these Azure services. We will not go in to deep architectural configuration and considerations, the intention here is to give an high level example.
+예제 애플리케이션은 다음과 같은 Azure 서비스로 구성됩니다. 이 연습의 목표는 개괄적인 예제를 제공하는 것이므로 아키텍처 구성 및 고려 사항에 대해 깊게 살펴보지는 않을 예정입니다.
 
 + **App service**: 애플리케이션을 호스트합니다.
 + **Azure AD B2C**: 사용자 로그인을 인증하고 프로필을 관리합니다.
@@ -18,19 +18,19 @@ Our example application consists of these Azure services. We will not go in to d
 
 1. 브라우저에서 [Azure 서비스에 대한 SLA 요약](https://azure.microsoft.com/en-us/support/legal/sla/summary/) 페이지로 이동합니다.
 
-2. Locate the <bpt id="p1">**</bpt>App Service<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.95%<ept id="p2">**</ept>. Click <bpt id="p1">**</bpt>View full details<ept id="p1">**</ept>, and then expand <bpt id="p2">**</bpt>SLA details<ept id="p2">**</ept>. Notice the <bpt id="p1">**</bpt>Monthly uptime percentages<ept id="p1">**</ept> and <bpt id="p2">**</bpt>Service Credits<ept id="p2">**</ept>.
+2. **App Service** SLA 가동 시간 값을 찾습니다. **99.95%** 입니다. **전체 세부 정보 보기**를 클릭하고 **SLA 세부 정보**를 확장합니다. **월별 가동 시간 비율** 및 **서비스 크레딧**을 확인합니다.
 
 3. SLA 웹 페이지로 돌아가서 **Azure Active Directory B2C** 서비스를 찾고 SLA 가동 시간 값을 확인합니다. **99.9%** 입니다. 
 
 4. **Application Gateway** SLA 가동 시간 값을 찾습니다. **99.95%** 입니다. 
 
-5. The Azure SQL database uses Premium tiers but is not configured for Zone Redundant Deployments. Locate the <bpt id="p1">**</bpt>Azure SQL Database<ept id="p1">**</ept> SLA uptime value, <bpt id="p2">**</bpt>99.99%<ept id="p2">**</ept>. 
+5. Azure SQL Database는 프리미엄 계층을 사용하지만 영역 중복 배포에는 구성되어 있지 않습니다. **Azure SQL Database** SLA 가동 시간 값을 찾습니다. **99.99%** 입니다. 
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: There are different uptime values for different configurations and deployments of Azure SQL Database. It is important you are clear on your required uptime values, when planning and costing your deployment and configuration. Small changes in uptime can have impact on service costs as well as potentially increase complexity in configuration. Some other services that may be of interest on the Azure SLA summary web page would include <bpt id="p1">**</bpt>Virtual Machines<ept id="p1">**</ept>, <bpt id="p2">**</bpt>Storage Accounts<ept id="p2">**</ept> and <bpt id="p3">**</bpt>Cosmos DB<ept id="p3">**</ept>.
+    **참고**: Azure SQL Database의 구성 및 배포에 따라 가동 시간 값이 다릅니다. 배포 및 구성을 계획하고 비용을 청구할 때는 필요한 가동 시간 값을 명확히 하는 것이 중요합니다. 가동 시간이 조금만 달라져도 서비스 비용이 영향을 받을 수 있으며 구성이 더 복잡할 수 있습니다. Azure SLA 요약 웹 페이지에서 관심을 끌 만한 다른 서비스로는 **가상 머신**, **스토리지 계정** 및 **Cosmos DB**가 있습니다.
 
 # <a name="task-2-calculate-the-application-composite-sla-percentage-uptime"></a>작업 2: 애플리케이션의 복합 SLA 백분율 가동 시간 계산
 
-1. 예제 애플리케이션은 다음과 같은 Azure 서비스로 구성됩니다.
+1. 애플리케이션을 구성하는 서비스를 사용할 수 없게 되면 사용자가 애플리케이션에 로그인하고 사용할 수 없게 됩니다. 따라서 애플리케이션의 총 가동 시간은 다음과 같이 구성됩니다.
 
     **App Service % 가동 시간** X **Azure AD B2C % 가동 시간** X  **Azure Application Gateway % 가동 시간** X **Azure SQL Database % 가동 시간** = **총 % 가동 시간**
 
@@ -40,4 +40,4 @@ Our example application consists of these Azure services. We will not go in to d
 
     이는 현재 서비스 및 아키텍처를 사용하는 애플리케이션의 SLA 기반 예상 가용성입니다.
 
-이 연습의 목표는 개괄적인 예제를 제공하는 것이므로 아키텍처 구성 및 고려 사항에 대해 깊게 살펴보지는 않을 예정입니다.
+축하합니다! 샘플 애플리케이션의 각 서비스에 대한 SLA 기반 가동 시간을 결정한 후 애플리케이션의 SLA 기반 예상 가용성을 계산하셨습니다.

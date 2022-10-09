@@ -6,7 +6,7 @@ wts:
 
 # <a name="03---deploy-azure-container-instances-10-min"></a>03 - Azure Container Instances 배포(10분)
 
-In this walkthrough we create, configure, and deploy a container by using Azure Container Instances (ACI) in the Azure Portal. The container is a Welcome to ACI web application that displays a static HTML page. 
+이 연습에서는 Azure Portal에서 ACI(Azure Container Instances)를 사용하여 컨테이너를 생성, 구성 및 배포합니다. 이 컨테이너는 정적 HTML 페이지를 표시하는 ACI 시작 웹 애플리케이션입니다. 
 
 # <a name="task-1-create-a-container-instance"></a>작업 1: 컨테이너 인스턴스 만들기 
 
@@ -31,14 +31,14 @@ In this walkthrough we create, configure, and deploy a container by using Azure 
     | 크기| 기본값 유지******|
 
 
-4. Configure the Networking tab (replace <bpt id="p1">**</bpt>xxxxx<ept id="p1">**</ept> with letters and digits such that the name is globally unique). Leave all other settings at their default values.
+4. 네트워킹 탭을 구성합니다(**xxxxx**를 문자와 숫자로 대체하여 이름을 전역적으로 고유하게 지정). 다른 모든 설정은 기본값으로 유지합니다.
 
     | 설정| 값|
     |--|--|
     | DNS 이름 레이블| **mycontainerdnsxxxxx** |
 
     
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Your container will be publicly reachable at dns-name-label.region.azurecontainer.io. If you receive a <bpt id="p1">**</bpt>DNS name label not available<ept id="p1">**</ept> error message following the deployment, specify a different DNS name label (replacing the xxxxx) and re-deploy. 
+    **참고**: dns-name-label.region.azurecontainer.io에서 컨테이너에 공개적으로 연결할 수 있습니다. 배포 후 **DNS 이름 레이블을 사용할 수 없음**이라는 오류 메시지가 표시되면 다른 DNS 이름 레이블을 지정하고(xxxxx 교체) 다시 배포하세요. 
 
 5. **검토 후 만들기**를 클릭하여 자동 유효성 검사 프로세스를 시작합니다.
 
@@ -59,11 +59,11 @@ In this walkthrough we create, configure, and deploy a container by using Azure 
 
     ![Azure Portal의 새로 만든 컨테이너에 대한 개요 창의 스크린샷. FQDN이 강조 표시되어 있음. ](../images/0202.png)
 
-2. 이 연습에서는 Azure Portal에서 ACI(Azure Container Instances)를 사용하여 컨테이너를 생성, 구성 및 배포합니다. 
+2. 컨테이너의 FQDN을 새 웹 브라우저 탭에 복사하고 **Enter** 키를 누릅니다. 시작 페이지가 표시됩니다. 
 
     ![웹 브라우저에 표시된 ACI 시작 메시지의 스크린샷.](../images/0203.png)
 
 
-이 컨테이너는 정적 HTML 페이지를 표시하는 ACI 시작 웹 애플리케이션입니다.
+**축하합니다.** Azure Portal을 사용하여 Azure Container Instances의 컨테이너에 애플리케이션을 성공적으로 배포했습니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

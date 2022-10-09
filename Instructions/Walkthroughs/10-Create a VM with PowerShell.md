@@ -34,7 +34,7 @@ wts:
 
 1. Cloud Shell 창의 왼쪽 위 드롭다운 메뉴에서 **PowerShell**이 선택되어 있는지 확인합니다.
 
-2. Verify your new resource group by running the following command in the Powershell window. Press <bpt id="p1">**</bpt>Enter<ept id="p1">**</ept> to run the command.
+2. Powershell 창에서 다음 명령을 실행하여 새 리소스 그룹을 확인합니다. **Enter** 키를 눌러 명령을 실행합니다.
 
     ```PowerShell
     Get-AzResourceGroup | Format-Table
@@ -57,7 +57,7 @@ wts:
 
 5. VM이 만들어지면 PowerShell 세션 Cloud Shell 창을 닫습니다.
 
-6. In the Azure portal, search for <bpt id="p1">**</bpt>Virtual machines<ept id="p1">**</ept> and verify the <bpt id="p2">**</bpt>myVMPS<ept id="p2">**</ept> is running. This may take a few minutes.
+6. Azure Portal에서 **가상 머신**을 검색하고 **myVMPS**가 실행 중인지 확인합니다. 몇 분이 걸릴 수 있습니다.
 
     ![myVMPS가 실행 중인 가상 머신 페이지의 스크린샷.](../images/1001.png)
 
@@ -71,7 +71,7 @@ wts:
 
 2. Cloud Shell 창의 왼쪽 위 드롭다운 메뉴에서 **PowerShell**이 선택되어 있는지 확인합니다.
 
-3. Retrieve information about your virtual machine including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. 이름, 리소스 그룹, 위치 및 상태 등 가상 머신에 대한 정보를 검색합니다. PowerState가 **running**인지 확인합니다.
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -82,9 +82,9 @@ wts:
     ```PowerShell
     Stop-AzVM -ResourceGroupName myRGPS -Name myVMPS
     ```
-5. When prompted confirm (Yes) to the action. Wait for <bpt id="p1">**</bpt>Succeeded<ept id="p1">**</ept> status.
+5. 메시지가 표시되면 작업을 확인(Yes)합니다. **Succeeded** 상태가 표시될 때까지 기다립니다.
 
-6. Verify your virtual machine state. The PowerState should now be <bpt id="p1">**</bpt>deallocated<ept id="p1">**</ept>. You can also verify the virtual machine status in the portal. Close Cloudshell.
+6. 가상 머신 상태를 확인합니다. 이제 PowerState가 **deallocated**여야 합니다. 포털에서 가상 머신 상태를 확인할 수도 있습니다. Cloudshell을 닫습니다.
 
     ```PowerShell
     Get-AzVM -name myVMPS -status | Format-Table -autosize
@@ -98,7 +98,7 @@ wts:
 
 1. **모든 서비스** 블레이드에서 **Advisor**를 검색하고 선택합니다. 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. **Advisor** 블레이드에서 **개요**를 선택합니다. 권장 사항이 안정성, 보안, 성능 및 비용으로 그룹화되어 있습니다. 
 
     ![Advisor 개요 페이지의 스크린샷. ](../images/1003.png)
 
@@ -114,6 +114,6 @@ wts:
 
 6. 시간이 있으면 Azure PowerShell을 사용하여 실험을 계속하세요. 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using PowerShell, practiced with PowerShell commands, and viewed Advisor recommendations.
+축하합니다! Cloud Shell을 구성하고, PowerShell을 사용하여 가상 머신을 만들고, PowerShell 명령을 실행하고, Advisor 권장 사항을 검토했습니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

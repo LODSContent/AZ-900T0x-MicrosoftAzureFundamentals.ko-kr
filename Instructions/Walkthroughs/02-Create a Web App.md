@@ -5,9 +5,9 @@ wts:
 ---
 # <a name="02---create-a-web-app-10-min"></a>02 - 웹앱 만들기(10분)
 
-In this walkthrough, we will create a web app that runs a Docker container. The Docker container contains a Welcome message. 
+이 연습에서는 Docker 컨테이너를 실행하는 웹앱을 만듭니다. Docker 컨테이너는 시작 메시지를 포함합니다. 
 
-Azure App Service are actually a collection of four services, all of which are built to help you host and run web applications. The four services (Web Apps, Mobile Apps, API Apps, and Logic Apps) look different, but in the end they all operate in very similar ways. Web Apps are the most commonly used of the four services, and this is the service that we will be using in this lab.
+Azure App Service는 웹 애플리케이션의 호스팅 및 실행을 지원하도록 설계된 4가지 서비스의 모음입니다. 4가지 서비스(Web Apps, Mobile Apps, API Apps 및 Logic Apps)는 모습은 다르지만 모두 매우 유사한 방식으로 작동합니다. Web Apps는 4가지 서비스 중 가장 일반적으로 사용되는 서비스이며 이 랩에서 사용할 서비스입니다.
 
 # <a name="task-1-create-a-web-app"></a>작업 1: 웹앱 만들기 
 
@@ -17,7 +17,7 @@ Azure App Service are actually a collection of four services, all of which are b
 
 2. **모든 서비스** 블레이드에서 **App Services**를 검색하여 선택하고 **+ 추가, + 만들기, + 새로 만들기**를 클릭합니다.
 
-3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Web App<ept id="p2">**</ept> blade, specify the following settings (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the web app with letters and digits such that the name is globally unique). Leave the defaults for everything else, including the App Service Plan. 
+3. **웹앱** 블레이드의 **기본** 탭에서 다음 설정을 지정합니다(웹앱 이름의 **xxxx**를 문자와 숫자로 대체하여 전역적으로 고유한 이름 지정). App Service 계획을 포함한 다른 모든 기본값을 그대로 둡니다. 
 
     | 설정 | 값 |
     | -- | -- |
@@ -51,16 +51,16 @@ Azure App Service are actually a collection of four services, all of which are b
 
 2. **알림**에서 **리소스로 이동**을 클릭합니다. 
 
-3. 이 연습에서는 Docker 컨테이너를 실행하는 웹앱을 만듭니다.
+3. **개요** 블레이드에서 **URL**을 찾습니다. URL을 클립보드에 복사합니다.
 
-    ![Docker 컨테이너는 시작 메시지를 포함합니다.](../images/0801.png)
+    ![웹앱 속성 블레이드의 스크린샷. URL이 강조 표시되어 있음.](../images/0801.png)
 
-4. In a new browser window, paste the URl and press enter. The Welcome to Azure Container Instances! welcome message will be displayed.
+4. 새 브라우저 창에서 URL을 붙여넣은 다음, Enter 키를 누릅니다. Azure Container Instances에 오신 것을 환영합니다! 환영 메시지가 표시됩니다.
 
     ![Azure Container Instance 시작 페이지의 스크린샷.](../images/0802.png)
 
-5. Azure App Service는 웹 애플리케이션의 호스팅 및 실행을 지원하도록 설계된 4가지 서비스의 모음입니다. 
+5. 웹앱의 **개요** 블레이드로 다시 전환하고 아래로 스크롤합니다. 데이터 입력/출력 및 요청을 추적하는 여러 개의 차트가 표시됩니다. 4단계를 몇 번 반복하면 차트에 해당 원격 분석 결과가 표시되는 것을 볼 수 있습니다. 여기에는 요청 수와 평균 응답 시간이 포함됩니다. 
 
-4가지 서비스(Web Apps, Mobile Apps, API Apps 및 Logic Apps)는 모습은 다르지만 모두 매우 유사한 방식으로 작동합니다.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.
 
 축하합니다. Azure App Service를 만들었습니다.

@@ -8,7 +8,7 @@ wts:
 
 이 연습에서는 TCO(총 소유 비용) 계산기를 사용하여 온-프레미스 환경의 비용 비교 보고서를 생성합니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: This walkthrough provides example definitions of on-premises infrastructure and workloads for a typical datacenter. To create a TCO Calculator report, use the example definitions or provide details of your <bpt id="p1">*</bpt>actual<ept id="p1">*</ept> on-premises infrastructure and workloads.
+**참고**: 이 연습에서는 일반적인 데이터 센터에 대한 온-프레미스 인프라 및 워크로드에 대한 예제 정의를 알아봅니다. TCO 계산기 보고서를 만들려면 예제 정의를 사용하거나 *실제* 온-프레미스 인프라 및 워크로드에 대한 세부 정보를 제공합니다.
 
 # <a name="task-1-configure-the-tco-calculator"></a>작업 1: TCO 계산기 구성
 
@@ -55,7 +55,7 @@ wts:
     | 디스크 유형 | **HDD** |
     | 용량 | **60TB** |  
     | Backup | **120TB** |
-    | 보관 | **0TB** |
+    | 아카이브 | **0TB** |
 
 5. **네트워킹** 창에서 대역폭을 추가합니다. 
 
@@ -88,6 +88,6 @@ wts:
 
 3. 보고서의 PDF 사본을 저장하거나 인쇄하려면 **다운로드**를 클릭합니다.
 
-    ![Screenshot of the report pane of the tco calculator in Azure. The highlighted and completed input fields indicates how set the tco calculator timeframe to three years and the region to north europe. A graph shows the cost of on-premises infrastructure and workloads off-set against the reduced cost of using Azure.](../images/2001.png)
+    ![Azure TCO 계산기 보고서 창의 스크린샷. 강조 표시되어 있고 모두 입력된 필드는 TCO 계산기 기간을 3년으로 설정하고 지역을 북유럽으로 설정하는 방법을 나타냅니다. 그래프는 Azure 사용에 따른 비용 절감과 비교되는 온-프레미스 인프라 및 워크로드 오프셋 비용을 보여줍니다.](../images/2001.png)
 
-Congratulations! You have used the TCO Calculator to generate a cost comparison report for an on-premises environment.
+축하합니다! TCO 계산기를 사용하여 온-프레미스 환경에 대한 비용 비교 보고서를 생성했습니다.

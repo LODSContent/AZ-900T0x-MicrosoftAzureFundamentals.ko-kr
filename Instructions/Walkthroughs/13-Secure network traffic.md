@@ -43,15 +43,15 @@ wts:
 
 6. 나머지 기본값을 그대로 유지한 다음 페이지 하단에 있는 **검토 + 만들기** 단추를 클릭합니다.
 
-7. Once Validation is passed click the <bpt id="p1">**</bpt>Create<ept id="p1">**</ept> button. It can take about five minutes to deploy the virtual machine.
+7. 유효성 검사가 통과되면 **만들기** 단추를 클릭합니다. 가상 머신을 배포하는 데 5분 정도 걸릴 수 있습니다.
 
-8. Monitor the deployment. It may take a few minutes for the resource group and virtual machine to be created. 
+8. 배포를 모니터링합니다. 리소스 그룹 및 가상 머신을 만드는 데 몇 분 정도 걸릴 수 있습니다. 
 
 9. 배포 블레이드 또는 알림 영역에서 **리소스로 이동**을 클릭합니다. 
 
 10. **SimpleWinVM** 가상 머신 블레이드에서 **네트워킹**을 클릭하고, **인바운드 포트 규칙** 탭을 검토하고, 가상 머신의 네트워크 인터페이스나 네트워크 인터페이스가 연결된 서브넷과 연관된 네트워크 보안 그룹이 없는지 확인합니다.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: Identify the name of the network interface. You will need it in the next task.
+    **참고**: 네트워크 인터페이스의 이름을 확인하세요. 다음 작업에서 해당 값이 필요합니다.
 
 # <a name="task-2-create-a-network-security-group"></a>작업 2: 네트워크 보안 그룹 만들기
 
@@ -84,14 +84,14 @@ wts:
 
 2. **개요** 창에서 **연결**을 클릭합니다.
 
-3. Attempt to connect to the virtual machine by selecting RDP and downloading an running the RDP file. By default the network security group does not allow RDP. Close the error window. 
+3. RDP를 선택하고 실행 중인 RDP 파일을 다운로드하여 가상 머신에 연결하려고 시도합니다. 기본적으로 네트워크 보안 그룹은 RDP를 허용하지 않습니다. 오류 창을 닫습니다. 
 
 
     ![가상 머신 연결에 실패했다는 오류 메시지의 스크린샷.](../images/1201.png)
 
 4. 가상 머신 블레이드에서 **설정** 섹션으로 스크롤하고, **네트워킹**을 클릭하고, **myNSGSecure(네트워크 인터페이스에 연결됨: myVMNic)** 네트워크 보안 그룹의 인바운드 규칙이 가상 네트워크와 부하 분산 장치 프로브 내의 트래픽을 제외한 모든 인바운드 트래픽을 거부하는 것을 확인합니다.
 
-5. On the <bpt id="p1">**</bpt>Inbound port rules<ept id="p1">**</ept> tab, click <bpt id="p2">**</bpt>Add inbound port rule<ept id="p2">**</ept> . Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are done. 
+5. **인바운드 포트 규칙** 탭에서 **인바운드 포트 규칙 추가**를 클릭합니다. 작업을 마치면 **추가**를 클릭합니다. 
 
     | 설정 | 값 |
     | -- | -- |
@@ -104,7 +104,7 @@ wts:
     | 우선 순위 | **300** |
     | 이름 | **AllowRDP** |
 
-6. Select <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> and wait for the rule to be provisioned and then try again to RDP into the virtual machine by going back to <bpt id="p2">**</bpt>Connect<ept id="p2">**</ept> This time you should be successful. Remember the user is <bpt id="p1">**</bpt>azureuser<ept id="p1">**</ept> and the password is <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>.
+6. **추가**를 선택하고 규칙이 프로비전될 때까지 기다린 후에 **연결**로 돌아가서 가상 머신에 RDP를 다시 시도합니다. 이번에는 성공해야 합니다. 사용자는 **azureuser**이고 암호는 **Pa$$w0rd1234**입니다.
 
 # <a name="task-4-configure-an-outbound-security-port-rule-to-deny-internet-access"></a>작업 4: 인터넷 액세스를 거부하는 아웃바운드 보안 포트 규칙 구성
 
@@ -114,7 +114,7 @@ wts:
 
 2. 머신이 시작되면 **Internet Explorer** 브라우저를 엽니다. 
 
-3. Verify that you can access <bpt id="p1">**</bpt><ph id="ph1">https://www.bing.com</ph><ept id="p1">**</ept> and then close Internet Explorer. You will need to work through the IE enhanced security pop-ups. 
+3. **https://www.bing.com** 에 액세스할 수 있는지 확인한 후에 Internet Explorer를 닫습니다. IE 보안 강화 팝업을 통해 작업해야 합니다. 
 
     **참고**: 이제 아웃바운드 인터넷 액세스를 거부하는 규칙을 구성합니다. 
 
@@ -122,9 +122,9 @@ wts:
 
 5. **설정**에서 **네트워킹**을 클릭하고 **아웃바운드 포트 규칙**을 클릭합니다.
 
-6. Notice there is a rule, <bpt id="p1">**</bpt>AllowInternetOutbound<ept id="p1">**</ept>. This a default rule and cannot be removed. 
+6. **AllowInternetOutbound**라는 규칙이 있습니다. 이 규칙은 기본 규칙이며 제거할 수 없습니다. 
 
-7. Click <bpt id="p1">**</bpt>Add outbound port rule<ept id="p1">**</ept> to the right of the <bpt id="p2">**</bpt>myNSGSecure  (attached to network interface: myVMNic)<ept id="p2">**</ept> network security group and configure a new outbound security rule with a higher priority that will deny internet traffic. Click <bpt id="p1">**</bpt>Add<ept id="p1">**</ept> when you are finished. 
+7. **myNSGSecure(네트워크 인터페이스에 연결됨: myVMNic)** 네트워크 보안 그룹의 오른쪽에서 **아웃바운드 포트 규칙 추가**를 클릭하고 인터넷 트래픽을 거부할 더 높은 우선 순위의 새 아웃바운드 보안 규칙을 구성합니다. 완료되면 **추가**를 클릭합니다. 
 
     | 설정 | 값 |
     | -- | -- |
@@ -140,6 +140,6 @@ wts:
 
 8. **추가**를 클릭합니다. RDP한 VM으로 돌아갑니다. 
 
-9. Browse to <bpt id="p1">**</bpt><ph id="ph1">https://www.microsoft.com</ph><ept id="p1">**</ept>. The page should not display. You may need to work through additional IE enhanced security pop-ups.  
+9. **https://www.microsoft.com** 으로 이동합니다. 페이지가 표시되지 않아야 합니다. 추가적인 IE 보안 강화 팝업을 통해 작업해야 할 수도 있습니다.  
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

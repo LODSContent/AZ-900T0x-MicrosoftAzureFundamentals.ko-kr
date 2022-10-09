@@ -15,7 +15,7 @@ wts:
 
 2. **모든 서비스** 블레이드에서 **스토리지 계정**을 검색하여 선택한 다음 **+ 추가, + 만들기, + 새로 만들기**를 클릭합니다. 
 
-3. On the <bpt id="p1">**</bpt>Basics<ept id="p1">**</ept> tab of the <bpt id="p2">**</bpt>Create storage account<ept id="p2">**</ept> blade, fill in the following information (replace <bpt id="p3">**</bpt>xxxx<ept id="p3">**</ept> in the name of the storage account with letters and digits such that the name is globally unique). Leave the defaults for everything else.
+3. **스토리지 계정 만들기** 블레이드의 **기본** 탭에서 다음 정보를 채웁니다(스토리지 계정 이름의 **xxxx**를 이름이 전역적으로 고유하도록 문자와 숫자로 대체). 다른 항목은 기본값을 사용합니다.
 
     | 설정 | 값 | 
     | --- | --- |
@@ -30,7 +30,7 @@ wts:
 
 5. **검토 + 만들기**를 클릭하여 스토리지 계정 설정을 검토하고 Azure에서 구성의 유효성을 검사할 수 있도록 허용합니다. 
 
-6. Once validated, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Wait for the notification that the account was successfully created. 
+6. 유효성 검사가 끝나면 **만들기**를 클릭합니다. 계정이 성공적으로 생성되었다는 알림을 기다립니다. 
 
 7. 홈페이지에서 **스토리지 계정**을 검색하여 선택하고 새 스토리지 계정이 나열되어 있는지 확인합니다.
 
@@ -42,7 +42,7 @@ wts:
 
 1. 새 스토리지 계정의 이름을 클릭하고, **데이터 스토리지** 섹션으로 스크롤한 다음 **컨테이너**를 클릭합니다.
 
-2. Click <bpt id="p1">**</bpt>+ Container<ept id="p1">**</ept> and complete the information. Use the Information icons to learn more. When done click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>.
+2. **+컨테이너**를 클릭하고 정보를 작성합니다. 자세한 내용을 보려면 정보 아이콘을 사용합니다. 선택을 완료한 후 **만들기**를 클릭합니다.
 
 
     | 설정 | 값 |
@@ -53,16 +53,16 @@ wts:
 
     ![Azure Portal의 스토리지 계정에서 새로 만든 Blob 컨테이너의 스크린샷.](../images/0402.png)
 
-4. Open a new browser window and search <bpt id="p1">**</bpt>Bing<ept id="p1">**</ept> for an image of a flower. Right click on the image and save it to your VM. 
+4. 새 브라우저 창을 열고 **Bing**에서 꽃 이미지를 검색합니다. 이미지를 마우스 오른쪽 단추로 클릭하고 VM에 저장합니다. 
 
 6. Portal로 돌아가서 **container1**을 클릭한 다음 **업로드**를 선택합니다.
 
-5. Browse for the image file you just saved on your local computer. Select it and then select upload.
+5. 방금 로컬 컴퓨터에 저장한 이미지 파일을 탐색합니다. 이를 선택한 후 업로드를 선택합니다.
 
    
 6. **고급** 화살표를 클릭하고, 기본값을 그대로 두고 사용 가능한 옵션을 검토한 다음 **업로드**를 클릭합니다.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: You can upload as many blobs as you like in this way. New blobs will be listed within the container.
+    **참고**: 이 방법으로 원하는 만큼 Blob을 업로드할 수 있습니다. 새 Blob은 컨테이너 내에 나열됩니다.
 
 7. 파일이 업로드되면 파일을 마우스 오른쪽 단추로 클릭하고 보기/편집, 다운로드, 속성 및 삭제와 같은 옵션을 확인할 수 있습니다. 
 
@@ -72,12 +72,12 @@ wts:
 
 1. 스토리지 계정 블레이드로 돌아가서 **문제 진단 및 해결**을 클릭합니다. 
 
-2. Explore some of the most common storage problems. Notice there are multiple troubleshooters here.
+2. 가장 일반적인 스토리지 문제 중 일부를 살펴봅니다. 여기에 여러 개의 문제 해결사가 있습니다.
 
-3. On the storage account blade, scroll down to the <bpt id="p1">**</bpt>Monitoring<ept id="p1">**</ept> section and click <bpt id="p2">**</bpt>Insights<ept id="p2">**</ept>. Notice there is information on Failures, Performance, Availability, and Capacity. Your information will be different.
+3. 스토리지 계정 블레이드에서 **모니터링** 섹션으로 스크롤하고 **인사이트**를 클릭합니다. 오류, 성능, 가용성 및 용량에 대한 정보가 있습니다. 표시되는 정보는 다를 수 있습니다.
 
     ![스토리지 계정 인사이트 페이지의 스크린샷.](../images/0403.PNG)
 
-**스토리지 계정 만들기** 블레이드의 **기본** 탭에서 다음 정보를 채웁니다(스토리지 계정 이름의 **xxxx**를 이름이 전역적으로 고유하도록 문자와 숫자로 대체).
+축하합니다! 스토리지 계정을 만들고 스토리지 Blob을 사용하여 작업을 수행했습니다.
 
-다른 항목은 기본값을 사용합니다.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

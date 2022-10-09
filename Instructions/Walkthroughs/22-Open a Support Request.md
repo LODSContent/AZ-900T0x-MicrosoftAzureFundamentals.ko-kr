@@ -13,9 +13,9 @@ wts:
 
 2. **모든 서비스** 블레이드에서 **도움말 + 지원**을 검색하여 선택한 다음 **지원 플랜**을 선택합니다.
 
-3. Take a few minutes to review the different support plans. Notice what is included in the <bpt id="p1">**</bpt>Basic<ept id="p1">**</ept> plan. 
+3. 몇 분 정도 시간을 내어 서로 다른 지원 플랜을 검토합니다. **기본** 플랜에 포함된 항목을 확인합니다. 
 
-4. Click <bpt id="p1">**</bpt>+ New support request<ept id="p1">**</ept>. The ticket is created based on the values you specify. 
+4. **+ 새 지원 요청**을 클릭합니다. 지정한 값에 따라 티켓이 생성됩니다. 
 
     | 설정 | 값|
     |----|--------|
@@ -29,9 +29,9 @@ wts:
 
 5. **다음: 솔루션 >>** 을 클릭하고 권장 솔루션을 읽습니다.
 
-6. Click <bpt id="p1">**</bpt>Next: Details &gt;&gt;<ept id="p1">**</ept>. When submitting an actual support request, you would provide as much information as possible to allow for a speedy resolution of the issue. Your contact choices on this page depend on your support plan. 
+6. **다음: 세부 정보 >>** 를 클릭합니다. 실제 지원 요청을 제출할 때 최대한 많은 정보를 제공하여 문제를 신속하게 해결할 수 있도록 합니다. 이 페이지에서 담당자 선택은 지원 플랜에 따라 다릅니다. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will stop at this point. Do you understand how to submit a technical request?
+    **참고:** 이 연습은 여기서 멈춥니다. 기술 요청을 제출하는 방법을 알고 있습니까?
 
 # <a name="task-2-create-a-billing-support-request"></a>작업 2: 청구 지원 요청 만들기
 
@@ -47,12 +47,12 @@ wts:
 
 2. **다음: 솔루션**을 클릭하고 권장 솔루션을 읽습니다.
 
-3. Click <bpt id="p1">**</bpt>Next: Details<ept id="p1">**</ept>.  When submitting a real support request you would provide as much information as possible to allow for a speedy resolution of the issue. 
+3. **다음: 세부 정보**를 클릭합니다.  실제 지원 요청을 제출할 때 최대한 많은 정보를 제공하여 문제를 신속하게 해결할 수 있도록 합니다. 
 
-    <bpt id="p1">**</bpt>Note:<ept id="p1">**</ept> We will STOP at this point. Do you understand how to submit a support request?
+    **참고:** 이 연습은 여기서 멈춥니다. 지원 요청을 제출하는 방법을 알고 있습니까?
 
-4. Click <bpt id="p1">**</bpt>All support requests<ept id="p1">**</ept>. This is where your support requests are shown. An email is also sent to your email address containing details of the support request.
+4. **모든 지원 요청**을 클릭합니다. 여기에 지원 요청이 표시됩니다. 지원 요청의 세부 정보가 포함된 이메일도 이메일 주소로 전송됩니다.
 
-몇 분 정도 시간을 내어 서로 다른 지원 플랜을 검토합니다.
+축하합니다! 사용 가능한 지원 플랜 옵션을 보고 새 지원 요청을 만들고 모니터링하는 연습을 했습니다.
 
 **참고**: [**Azure 지원 티켓을 만드는 방법**](https://azure.microsoft.com/en-us/support/create-ticket)에 대한 자세한 내용을 보려면 클릭하세요.

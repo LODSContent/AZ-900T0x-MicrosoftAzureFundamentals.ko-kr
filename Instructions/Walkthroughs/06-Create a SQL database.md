@@ -57,22 +57,22 @@ wts:
 
     ![SQL Database 만들기 블레이드의 추가 설정 탭 스크린샷. 테이블별로 설정이 선택되어 있고 검토 + 만들기 단추가 강조 표시되어 있음.](../images/0501c.png)
 
-7. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> and then click <bpt id="p2">**</bpt>Create<ept id="p2">**</ept> to deploy and provision the resource group, server, and database. It can take approx. 2 to 5 minutes to deploy.
+7. **검토 + 만들기**를 클릭한 다음 **만들기**를 클릭하여 리소스 그룹, 서버 및 데이터베이스를 배포하고 프로비전합니다. 배포에 약 2~5분이 걸릴 수 있습니다.
 
 
 # <a name="task-2-test-the-database"></a>작업 2: 데이터베이스를 테스트합니다.
 
 이 작업에서는 SQL Server를 구성하고 SQL 쿼리를 실행합니다. 
 
-1. When the deployment has completed, click Go to resource from the deployment blade. Alternatively, from the <bpt id="p1">**</bpt>All Resources<ept id="p1">**</ept> blade, search and select <bpt id="p2">**</bpt>Databases<ept id="p2">**</ept>, then <bpt id="p3">**</bpt>SQL databases<ept id="p3">**</ept> ensure your new database was created. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. 배포가 완료되면 배포 블레이드에서 리소스로 이동을 클릭합니다. 또는 **모든 서비스** 블레이드에서 **데이터베이스**와 **SQL Database**를 차례로 검색하여 선택하고 새 데이터베이스가 생성되었는지 확인합니다. 페이지 **새로 고침**이 필요할 수도 있습니다.
 
     ![방금 배포된 SQL 데이터베이스 및 서버의 스크린샷입니다.](../images/0502.png)
 
-2. Click the <bpt id="p1">**</bpt>db1<ept id="p1">**</ept> entry representing the SQL database you created. On the db1 blade click <bpt id="p1">**</bpt>Query editor (preview)<ept id="p1">**</ept>.
+2. 방금 만든 SQL Database를 나타내는 **db1** 항목을 클릭합니다. db1 블레이드에서 **쿼리 편집기(미리 보기)** 를 클릭합니다.
 
 3. 암호 **Pa$$w0rd1234**를 사용하여 **sqluser**로 로그인합니다.
 
-4. You will not be able to login. Read the error closely and make note of the IP address that needs to be allowed through the firewall. 
+4. 로그인할 수 없습니다. 오류를 자세히 읽어 보고 방화벽을 통해 허용해야 하는 IP 주소를 기록해 둡니다. 
 
     ![IP 주소 오류가 있는 쿼리 편집기 로그인 페이지의 스크린샷입니다.](../images/0503.png)
 
@@ -82,13 +82,13 @@ wts:
 
 6. db1 **개요** 블레이드에서 개요 화면의 중앙 상단에 위치한 **서버 방화벽 설정**을 클릭합니다.
 
-7. Click <bpt id="p1">**</bpt>+ Add client IP<ept id="p1">**</ept> (top menu bar) to add the IP address referenced in the error. (it may have autofilled for you - if not paste it into the IP address fields). Be sure to <bpt id="p1">**</bpt>Save<ept id="p1">**</ept> your changes. 
+7. **+ 클라이언트 IP 추가**(상단 메뉴 모음)를 클릭하여 오류에서 언급된 IP 주소를 추가합니다. (자동으로 채워져 있을 수도 있습니다. 그렇지 않은 경우에는 IP 주소 필드에 붙여넣습니다.) 변경 내용을 **저장**합니다. 
 
     ![새 IP 규칙이 강조 표시된 SQL Server 방화벽 설정 페이지의 스크린샷입니다.](../images/0506.png)
 
-8. Return to your SQL database (slide the bottom toggle bar to the left) and click on <bpt id="p1">**</bpt>Query Editor (Preview)<ept id="p1">**</ept>. Try to login again as <bpt id="p1">**</bpt>sqluser<ept id="p1">**</ept> with the password <bpt id="p2">**</bpt>Pa$$w0rd1234<ept id="p2">**</ept>. This time you should succeed. Note that it may take a couple of minutes for the new firewall rule to be deployed. 
+8. SQL Database로 돌아가고(아래쪽 토글 막대를 왼쪽으로 슬라이드) **쿼리 편집기(미리 보기)** 를 클릭합니다. 암호 **Pa$$w0rd1234**를 사용하여 **sqluser**로 로그인합니다. 이번에는 성공해야 합니다. 새 방화벽 규칙을 배포하는 데 몇 분 정도 걸릴 수 있습니다. 
 
-9. Once you log in successfully, the query pane appears. Enter the following query into the editor pane. 
+9. 성공적으로 로그인되면 쿼리 창이 나타납니다. 편집기 창에 다음 쿼리를 입력합니다. 
 
     ```SQL
     SELECT TOP 20 pc.Name as CategoryName, p.name as ProductName
@@ -99,10 +99,10 @@ wts:
 
     ![쿼리 창 및 명령이 성공적으로 실행된 쿼리 편집기 스크린샷입니다.](../images/0507.png)
 
-10. Click <bpt id="p1">**</bpt>Run<ept id="p1">**</ept>, and then review the query results in the <bpt id="p2">**</bpt>Results<ept id="p2">**</ept> pane. The query should run successfully.
+10. **실행**을 클릭한 다음 **결과** 창에서 쿼리 결과를 검토합니다. 쿼리가 성공적으로 실행됩니다.
 
     ![SQL 코드가 성공적으로 실행되고 결과가 결과 창에 표시된 데이터베이스 쿼리 편집기 창의 스크린샷입니다.](../images/0508.png)
 
-Congratulations! You have created a SQL database in Azure and successfully queried the data in that database.
+축하합니다! Azure에서 SQL 데이터베이스를 만들고 해당 데이터베이스의 데이터를 성공적으로 쿼리했습니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

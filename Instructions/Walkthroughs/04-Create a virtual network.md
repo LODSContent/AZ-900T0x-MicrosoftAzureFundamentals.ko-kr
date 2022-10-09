@@ -27,7 +27,7 @@ wts:
     | 지역 | **(미국) 미국 동부** |
     
    
-4. Click the <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept> button. Ensure the validation passes. Then hit create to deploy the resource.
+4. **검토 + 만들기** 단추를 클릭합니다. 유효성 검사에 통과하는지 확인합니다. 그런 다음 만들기를 눌러 리소스를 배포합니다.
 
 
 # <a name="task-2-create-two-virtual-machines"></a>작업 2: 두 개의 가상 머신 만들기
@@ -51,13 +51,13 @@ wts:
    | 선택한 인바운드 포트| **RDP(3389)** |
    
 
-3. Select the <bpt id="p1">**</bpt>Networking<ept id="p1">**</ept> tab. Make sure the virtual machine is placed in the <bpt id="p2">**</bpt>vnet1<ept id="p2">**</ept> virtual network. Review the default settings, but do not make any other changes. 
+3. **네트워킹** 탭을 선택합니다. 가상 머신이 **vnet1** 가상 네트워크에 있는지 확인합니다. 기본 설정을 검토하되 변경은 하지 마세요. 
 
-4. Click <bpt id="p1">**</bpt>Review + create<ept id="p1">**</ept>. After the Validation passes, click <bpt id="p1">**</bpt>Create<ept id="p1">**</ept>. Deployment times can vary but it can generally take between three to six minutes to deploy.
+4. **검토 + 만들기**를 클릭합니다. 유효성 검사에 통과한 후 **만들기**를 클릭합니다. 배포 시간에는 차이가 있을 수 있지만 일반적으로 배포하는 데 3~6분이 소요됩니다.
 
 5. 배포를 모니터링하면서 다음 단계로 계속합니다. 
 
-6. Create a second virtual machine by repeating steps <bpt id="p1">**</bpt>2 to 4<ept id="p1">**</ept> above. Make sure you use a different virtual machine name, that the virtual machine is in the same virtual network, and is using a new public IP address:
+6. 위의 **2~4**단계를 반복하여 두 번째 가상 머신을 만듭니다. 다른 가상 머신 이름을 사용하고, 가상 머신이 같은 가상 네트워크에 있는지 그리고 새 공용 IP 주소를 사용하고 있는지 확인합니다.
 
     | 설정 | 값 |
     | --- | --- |
@@ -70,9 +70,9 @@ wts:
 
 # <a name="task-3-test-the-connection"></a>작업 3: 연결 테스트 
 
-In this task, we will try to test whether the virtual machines can communicate (ping) each other. If not we will install a rule to allow an ICMP connection. Usually ICMP connections are automatically blocked.
+이 작업에서는 가상 머신이 서로 통신(ping)할 수 있는지 테스트해 볼 것입니다. 통신할 수 없는 경우 ICMP 연결을 허용하기 위한 규칙을 설치할 것입니다. 대개의 경우 ICMP 연결은 자동으로 차단됩니다.
 
-1. From the <bpt id="p1">**</bpt>All resources<ept id="p1">**</ept> blade, search for <bpt id="p2">**</bpt>vm1<ept id="p2">**</ept>, open its <bpt id="p3">**</bpt>Overview<ept id="p3">**</ept> blade, and make sure its <bpt id="p4">**</bpt>Status<ept id="p4">**</ept> is <bpt id="p5">**</bpt>Running<ept id="p5">**</ept>. You may need to <bpt id="p1">**</bpt>Refresh<ept id="p1">**</ept> the page.
+1. **모든 리소스** 블레이드에서 **vm1**을 검색하고, **개요** 블레이드를 열고, **상태**가 **실행 중**인지 확인합니다. 페이지 **새로 고침**이 필요할 수도 있습니다.
 
 2. **개요** 블레이드에서 **연결**을 선택하고 드롭다운에서 **RDP**를 선택합니다.
 
@@ -84,7 +84,7 @@ In this task, we will try to test whether the virtual machines can communicate (
 
 5. **Windows 보안** 창에서 사용자 이름 **azureuser** 및 암호 **Pa$$w0rd1234**를 입력한 다음 **확인**을 클릭합니다.
 
-6. You may receive a certificate warning during the sign-in process. Click <bpt id="p1">**</bpt>Yes<ept id="p1">**</ept> to create the connection and connect to your deployed VM. You should connect successfully. Close the Windows Server and Dashboard windows that pop up. You should see a Blue Windows background. You are now in your virtual machine.
+6. 로그인 프로세스 중에 인증서 경고가 나타날 수 있습니다. **예**를 클릭하여 연결을 생성하고 배포된 VM에 연결합니다. 성공적으로 연결되어야 합니다. Windows Server 그리고 팝업 창으로 열리는 대시보드를 닫습니다. 파란색 Windows 배경이 표시됩니다. 이제 가상 머신 안에 있는 것입니다.
 
 7. 새로 만든 가상 머신 **모두**에서 RDP를 통해 연결하고 시작 메뉴 > 설정 > 네트워크 및 인터넷 > Windows 방화벽 찾기를 열어 공용 방화벽과 프라이빗 방화벽을 모두 사용하지 않도록 설정합니다.
 
@@ -96,9 +96,9 @@ In this task, we will try to test whether the virtual machines can communicate (
    ping vm2
    ```
 
- 10. You should be successful. You have pinged VM2 from VM1.
+ 10. 작업이 성공해야 합니다. VM1에서 VM2를 ping했습니다.
 
 
-<bpt id="p1">**</bpt>Congratulations!<ept id="p1">**</ept> You have configured and deployed two virtual machines in a virtual network, and then you were able to connect them.
+**축하합니다.** 가상 네트워크에서 두 개의 가상 머신을 구성하고 배포했으며, 이 둘을 연결할 수 있었습니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.

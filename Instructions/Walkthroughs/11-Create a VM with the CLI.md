@@ -19,7 +19,7 @@ wts:
    
 3. Azure Cloud Shell 시작 대화 상자에서 **Bash** 또는 **PowerShell**을 선택하라는 메시지가 표시되면 **Bash**를 선택합니다. 
 
-4. A new window will open stating <bpt id="p1">**</bpt>You have no storage mounted<ept id="p1">**</ept>. Select <bpt id="p1">**</bpt>advanced settings<ept id="p1">**</ept>.
+4. **장착된 스토리지가 없습니다**라는 새 창이 열립니다. **고급 설정**을 선택합니다.
 
 5. 고급 설정 화면에서 다음 필드를 채운 후에 스토리지 만들기를 클릭합니다.
     - 리소스 그룹: **새 리소스 그룹 만들기**
@@ -42,7 +42,7 @@ wts:
     az group list --output table
     ```
 
-4. In Cloud Shell enter the command below and make sure that each line, except for the last one, is followed by the backslash (<ph id="ph1">`\`</ph>) character. If you type the whole command on the same line, do not use any backslash characters. 
+4. Cloud Shell에서 아래 명령을 입력하고, 마지막 줄을 제외한 모든 줄 뒤에 백슬래시(`\`) 문자가 있는지 확인합니다. 전체 명령을 한 줄에 입력하는 경우에는 백슬래시 문자를 사용하지 마세요. 
 
     ```cli
     az vm create \
@@ -56,7 +56,7 @@ wts:
 
     >**참고**: Windows 컴퓨터에서 명령줄을 사용하는 경우에는 백슬래시(`\`) 문자를 캐럿(`^`) 문자로 바꾸세요.
 
-    <bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: The command will take 2 to 3 minutes to complete. The command will create a virtual machine and various resources associated with it such as storage, networking and security resources. Do not continue to the next step until the virtual machine deployment is complete. 
+    **참고**: 명령을 완료하는 데 2~3분 정도 걸립니다. 명령이 완료되면 가상 머신과 머신에 연결된 다양한 리소스(예: 스토리지, 네트워킹 및 보안 리소스)가 만들어집니다. 가상 머신 배포가 완료될 때까지 다음 단계로 진행하지 마십시오. 
 
 5. 명령 실행이 완료되면 브라우저 창에서 Cloud Shell 창을 닫습니다.
 
@@ -73,19 +73,19 @@ wts:
 
 2. Cloud Shell 창의 왼쪽 위 드롭다운 메뉴에서 **Bash**가 선택되어 있는지 확인합니다.
 
-3. Retrieve information about the virtual machine you provisioned, including name, resource group, location, and status. Notice the PowerState is <bpt id="p1">**</bpt>running<ept id="p1">**</ept>.
+3. 이름, 리소스 그룹, 위치 및 상태 등 프로비저닝한 가상 머신에 대한 정보를 검색합니다. PowerState가 **running**인지 확인합니다.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
     ```
 
-4. Stop the virtual machine. Notice the message that billing continues until the virtual machine is deallocated. 
+4. 가상 머신을 중지합니다. 가상 머신이 할당 취소되기 전까지는 청구가 계속된다는 메시지가 표시됩니다. 
 
     ```cli
     az vm stop --resource-group myRGCLI --name myVMCLI
     ```
 
-5. Verify your virtual machine status. The PowerState should now be <bpt id="p1">**</bpt>stopped<ept id="p1">**</ept>.
+5. 가상 머신 상태를 확인합니다. 이제 PowerState가 **stopped**여야 합니다.
 
     ```cli
     az vm show --resource-group myRGCLI --name myVMCLI --show-details --output table 
@@ -99,7 +99,7 @@ wts:
 
 1. **모든 서비스** 블레이드에서 **Advisor**를 검색하고 선택합니다. 
 
-2. On the <bpt id="p1">**</bpt>Advisor<ept id="p1">**</ept> blade, select <bpt id="p2">**</bpt>Overview<ept id="p2">**</ept>. Notice recommendations are grouped by Reliability, Security, Performance, and Cost. 
+2. **Advisor** 블레이드에서 **개요**를 선택합니다. 권장 사항이 안정성, 보안, 성능 및 비용으로 그룹화되어 있습니다. 
 
     ![Advisor 개요 페이지의 스크린샷. ](../images/1103.png)
 
@@ -115,6 +115,6 @@ wts:
 
 6. 시간이 있으면 Azure CLI를 사용하여 실험을 계속하세요. 
 
-Congratulations! You have configured Cloud Shell, created a virtual machine using Azure CLI, practiced with Azure CLI commands, and viewed Advisor recommendations.
+축하합니다! Cloud Shell을 구성하고, Azure CLI를 사용하여 가상 머신을 만들고, Azure CLI 명령을 실행하고, Advisor 권장 사항을 검토했습니다.
 
-<bpt id="p1">**</bpt>Note<ept id="p1">**</ept>: To avoid additional costs, you can optionally remove this resource group. Search for resource groups, click your resource group, and then click <bpt id="p1">**</bpt>Delete resource group<ept id="p1">**</ept>. Verify the name of the resource group and then click <bpt id="p1">**</bpt>Delete<ept id="p1">**</ept>. Monitor the <bpt id="p1">**</bpt>Notifications<ept id="p1">**</ept> to see how the delete is proceeding.
+**참고**: 이 리소스 그룹을 제거해 추가 비용이 발생하는 것을 방지할 수도 있습니다. 리소스 그룹을 검색하고 리소스 그룹을 클릭한 다음 **리소스 그룹 삭제**를 클릭합니다. 리소스 그룹의 이름을 확인한 다음 **삭제**를 클릭합니다. **알림**을 모니터링하여 삭제가 어떻게 진행되는지 확인합니다.
