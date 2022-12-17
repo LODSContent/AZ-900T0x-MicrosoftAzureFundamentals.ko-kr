@@ -6,7 +6,7 @@ layout: home
 
 # <a name="content-directory"></a>콘텐츠 디렉터리
 
-Hyperlinks to each of the walkthroughs. Instructors may choose to use the walkthrough as a demonstration or a student lab. 
+각 연습에 대한 하이퍼링크. 강사는 연습을 데모 또는 학생 랩으로 사용할 수 있습니다. 
 
 ## <a name="walkthroughs"></a>연습
 
